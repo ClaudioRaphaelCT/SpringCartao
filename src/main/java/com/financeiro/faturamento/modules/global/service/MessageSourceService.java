@@ -1,0 +1,16 @@
+package com.financeiro.faturamento.modules.global.service;
+
+import lombok.AllArgsConstructor;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.stereotype.Service;
+
+@Service
+@AllArgsConstructor
+public class MessageSourceService {
+    private final MessageSource messageSource;
+
+    public String getMessage(String key, Object... args) {
+        return messageSource.getMessage(key, args, LocaleContextHolder.getLocale());
+    }
+}

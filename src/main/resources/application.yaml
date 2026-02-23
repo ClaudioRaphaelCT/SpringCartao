@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: faturamento
+
+  jackson:
+    mapper:
+      # Isso aqui ajuda o Jackson a ser menos rígido globalmente
+      ACCEPT_CASE_INSENSITIVE_ENUMS: true
