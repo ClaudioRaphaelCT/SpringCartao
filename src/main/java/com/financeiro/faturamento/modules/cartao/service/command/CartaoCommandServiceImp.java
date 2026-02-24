@@ -49,7 +49,7 @@ public class CartaoCommandServiceImp implements CartaoCommandService {
         Cartao cartao = validator.validIdNotExists(id);
         repository.delete(cartao);
         return new GlobalResponse<>(
-                message.getMessage("cartao.remover.id"),
+                message.getMessage("cartao.remover.id", id),
                 null
         );
     }
