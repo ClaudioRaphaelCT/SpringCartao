@@ -2,7 +2,20 @@ spring:
   application:
     name: faturamento
 
+  datasource:
+    url: jdbc:postgresql://aws-0-us-west-2.pooler.supabase.com:6543/postgres?sslmode=require
+    username: postgres.llelfxjyuevdbnxippnr
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
   jackson:
     mapper:
-      # Isso aqui ajuda o Jackson a ser menos rígido globalmente
       ACCEPT_CASE_INSENSITIVE_ENUMS: true
